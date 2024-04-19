@@ -4,12 +4,26 @@ import Item from './componentes/item/item.js';
 import Menu from './componentes/menu/menu.js';
 import Formulario from './componentes/form/form.js';
 
+//Agregando el grid
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 function App() {
   return (
     <div className="App">
       <Menu></Menu>
-      <Formulario></Formulario>
-      <Item></Item>
+        <Container>
+         <Row>
+            <Col><Formulario></Formulario></Col>
+            <Col>
+              <Item></Item>
+              <Item></Item>
+              <Item></Item>
+              <Item></Item>
+            </Col>
+          </Row>
+        </Container>
     </div>
   );
 }
