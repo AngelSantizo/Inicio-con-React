@@ -1,25 +1,23 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+//agregamos .scss
+import './form.scss'
 
 function Formulario() {
   return (
     <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Titulo</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" />
-        <Form.Text className="text-muted">
-          We'll never share your email with anyone else.
-        </Form.Text>
+        <Form.Label className='FormLabel'>Nombre</Form.Label>
+        <Form.Control type="text" />
       </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control type="password" placeholder="Password" />
+      <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+        <Form.Label className='FormLabel'>Descripcion</Form.Label>
+        <Form.Control as="textarea" rows={3} />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
-      </Form.Group>
-      <Button variant="primary" type="submit">
+      <Form.Label className='FormLabel'>Urgencia</Form.Label>
+      <Form.Control type="text" />
+      <Button variant="primary" type="submit" className='FormBoton'>
         Submit
       </Button>
     </Form>

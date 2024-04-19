@@ -6,16 +6,15 @@ import './item.scss'
 function Item() {
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title>Realizar proyecto</Card.Title>
+      <Card.Body className='CardBody'>
+        <Card.Title className='CardTitle'>Realizar proyecto</Card.Title>
         <Card.Text className='fw-bold'>
           Descripcion
         </Card.Text>
         <Card.Text>
           Elaborar proyecto del curso de desarrollo web por Angel Santizo
         </Card.Text>
-        <Button variant="primary">Remove</Button>
+        <Button variant='dark'>Completadao</Button>
       </Card.Body>
     </Card>
   );
