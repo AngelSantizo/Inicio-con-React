@@ -17,7 +17,7 @@ function Formulario() {
       </Form.Group>
       <Form.Label className='FormLabel'>Urgencia</Form.Label>
       <Form.Control type="text" />
-      <Button variant="primary" type="submit" className='FormBoton'>
+      <Button type="submit" className='FormBoton'>
         Submit
       </Button>
     </Form>

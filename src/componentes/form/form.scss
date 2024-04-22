@@ -1,8 +1,15 @@
 .FormBoton{
     margin-top: 15px;
+    background-color: gray;
+    width: 160px;
+    border-color: gray;
+}
+
+.FormBoton:hover{
+    background-color: rgb(177, 171, 171);
+    border-color: rgb(177, 171, 171);
 }
 
 .FormLabel{
     font-weight: bold;
-    
 }
