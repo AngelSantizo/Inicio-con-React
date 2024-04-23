@@ -17,7 +17,7 @@ function App() {
          <Row>
             <Col><Formulario></Formulario></Col>
             <Col>
-              <Item></Item>
+              <Item name={'Terminar proyecto curso'} description={'Realizar todas las actividades del curso'} dueDate={'25-04-2024'}></Item>
               <Item></Item>
               <Item></Item>
               <Item></Item>
