@@ -15,8 +15,8 @@ function Formulario() {
         <Form.Label className='FormLabel'>Descripcion</Form.Label>
         <Form.Control as="textarea" rows={3} />
       </Form.Group>
-      <Form.Label className='FormLabel'>Urgencia</Form.Label>
-      <Form.Control type="text" />
+      <Form.Label className='FormLabel'>Deadline</Form.Label>
+      <Form.Control type="date" />
       <Button type="submit" className='FormBoton'>
         Submit
       </Button>

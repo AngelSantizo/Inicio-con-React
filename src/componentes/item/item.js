@@ -14,7 +14,8 @@ function Item() {
         <Card.Text>
           Elaborar proyecto del curso de desarrollo web por Angel Santizo
         </Card.Text>
-        <Button variant='dark'>Completadao</Button>
+        <Button variant='dark' className='botonCompletar'>Eliminar</Button>
+        <Button variant='dark'>Editar</Button>
       </Card.Body>
     </Card>
   );
