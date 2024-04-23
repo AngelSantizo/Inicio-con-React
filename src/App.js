@@ -10,6 +10,12 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 function App() {
+  //haremos un JSON para facilitar el ingreso de informacion
+  const tareas = [{
+    name:'Terminar proyecto curso',
+    description:'Realizar todas las actividades del curso',
+    dueDate:'25-04-2024'
+  }]
   return (
     <div className="App">
       <Menu></Menu>
@@ -17,10 +23,13 @@ function App() {
          <Row>
             <Col><Formulario></Formulario></Col>
             <Col>
-              <Item name={'Terminar proyecto curso'} description={'Realizar todas las actividades del curso'} dueDate={'25-04-2024'}></Item>
-              <Item></Item>
-              <Item></Item>
-              <Item></Item>
+              {
+                /**en este espacio entre corchetes podemos escribir codigo JS en lugar de codigo JSX */
+
+                tareas.map((tarea)=>{
+                  return <Item name={tarea.name} description={tarea.description} dueDate={tarea.dueDate}></Item>
+                })
+              }
             </Col>
           </Row>
         </Container>
