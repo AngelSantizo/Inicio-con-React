@@ -18,11 +18,12 @@ function Formulario() {
   const inputRefName = useRef();
   const inputRefDes = useRef();
   const inputRefDate = useRef();
+  const dispatch = useDispatch();
 
   //ahora haremos la funcion para agregar la meta en el item
   const addItem = (e)=>{
     e.preventDefault();
-    useDispatch(addGoal({
+    dispatch(addGoal({
       name:inputRefName.current.value,
       description: inputRefDes.current.value,
       dueDate: inputRefDate.current.value

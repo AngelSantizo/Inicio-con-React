@@ -24,5 +24,5 @@ export const goalSlice = createSlice({
 })
 
 //aqui exportamos 
-export const {goals} = goalSlice.actions
+export const {addGoal} = goalSlice.actions
 export default goalSlice.reducers
