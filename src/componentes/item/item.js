@@ -5,7 +5,7 @@ import './item.scss'
 
 function Item(props) {
   return (
-    <Card style={{ width: '18rem' }}>
+    <Card style={{ width: '22rem' }}>
       <Card.Body className='CardBody'>
         <Card.Title className='CardTitle'>{props.name}</Card.Title>
         <Card.Text className='fw-bold'>

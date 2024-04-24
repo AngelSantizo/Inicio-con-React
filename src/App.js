@@ -15,6 +15,11 @@ function App() {
     name:'Terminar proyecto curso',
     description:'Realizar todas las actividades del curso',
     dueDate:'25-04-2024'
+  },
+  {
+    name:'Terminar tareas curso',
+    description:'Realizar todas las actividades del curso',
+    dueDate:'27-04-2024'
   }]
   return (
     <div className="App">
