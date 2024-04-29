@@ -31,7 +31,7 @@ function Formulario() {
   }
 
   return (
-    <Form>
+    <Form className='formulario-general'>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label className='FormLabel'>Nombre</Form.Label>
         <Form.Control type="text" ref={inputRefName}/>
