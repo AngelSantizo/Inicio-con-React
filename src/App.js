@@ -9,18 +9,12 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+//accederemos a nuestros estados usando useSelector
+import { useSelector } from 'react-redux';
+
 function App() {
-  //haremos un JSON para facilitar el ingreso de informacion
-  const tareas = [{
-    name:'Terminar proyecto curso',
-    description:'Realizar todas las actividades del curso',
-    dueDate:'25-04-2024'
-  },
-  {
-    name:'Terminar tareas curso',
-    description:'Realizar todas las actividades del curso',
-    dueDate:'27-04-2024'
-  }]
+  //exploraremos ahora la informacion de los estados para pasarlo a las cards y agregarlas
+  const goal = useSelector((state)=>state.goal.value);
   return (
     <div className="App">
       <Menu></Menu>
@@ -31,7 +25,7 @@ function App() {
               {
                 /**en este espacio entre corchetes podemos escribir codigo JS en lugar de codigo JSX */
 
-                tareas.map((tarea)=>{
+                goal.map((tarea)=>{
                   return <Item name={tarea.name} description={tarea.description} dueDate={tarea.dueDate}></Item>
                 })
               }
