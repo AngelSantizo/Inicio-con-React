@@ -3,7 +3,20 @@ import Card from 'react-bootstrap/Card';
 //tenemos que importar tambien la hoja de estilos .scss
 import './item.scss'
 
+//importar la accion para remover la carta
+import { useDispatch } from 'react-redux';
+
+//importamos la accion osea el reducer
+import {
+  removeGoal
+} from '../../reducers/goalSlice';
+
 function Item(props) {
+  const dispatch = useDispatch();
+  //creamos la funcion para el evento onclick
+  const deleteGoal = (e)=>{
+    dispatch(removeGoal({ name: 'test1' }));
+  }
   return (
     <Card style={{ width: '22rem' }}>
       <Card.Body className='CardBody'>
@@ -20,7 +33,7 @@ function Item(props) {
         <Card.Text>
           {props.dueDate} 
         </Card.Text>
-        <Button variant='dark' className='botonCompletar'>Eliminar</Button>
+        <Button variant='dark' className='botonCompletar' onClick={deleteGoal}>Eliminar</Button>
         <Button variant='dark'>Editar</Button>
       </Card.Body>
     </Card>
