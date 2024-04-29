@@ -8,7 +8,7 @@ import { useDispatch } from 'react-redux';
 //importamos la accion osea el reducer
 import {
   addGoal
-} from '../../reducers/goals';
+} from '../../reducers/goalSlice';
 
 //importaremos useRef para obtener la informacion del formulario (esto ya es de react)
 import { useRef } from 'react';
@@ -24,9 +24,9 @@ function Formulario() {
   const addItem = (e)=>{
     e.preventDefault();
     dispatch(addGoal({
-      name:inputRefName.current.value,
-      description: inputRefDes.current.value,
-      dueDate: inputRefDate.current.value
+      'name':inputRefName.current.value,
+      'description': inputRefDes.current.value,
+      'dueDate': inputRefDate.current.value
     }));
   }
 

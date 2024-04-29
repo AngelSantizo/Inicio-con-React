@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 //importamos el reducer creado para las metas
-import goalSlice from "./reducers/goals";
+import goalReducer from "./reducers/goalSlice";
 
 export default configureStore({
     reducer:{
-        goal: goalSlice
+        goal: goalReducer
     }
 })
