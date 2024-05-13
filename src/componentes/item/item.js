@@ -8,15 +8,19 @@ import { useDispatch } from 'react-redux';
 
 //importamos la accion osea el reducer
 import {
-  removeGoal
-} from '../../reducers/goalSlice';
+  removeTodo
+} from '../../reducers/todoSlice';
 
 function Item(props) {
   const dispatch = useDispatch();
-  //creamos la funcion para el evento onclick
-  const deleteGoal = (e)=>{
-    dispatch(removeGoal({ name: 'test1' }));
+
+  //agregaremos aqui ahora el removeTodo
+  const removeItem = (e) =>{
+    e.preventDefault();
+
+    dispatch(removeTodo(props.id));
   }
+  
   return (
     <Card style={{ width: '22rem' }}>
       <Card.Body className='CardBody'>
@@ -33,7 +37,7 @@ function Item(props) {
         <Card.Text>
           {props.dueDate} 
         </Card.Text>
-        <Button variant='dark' className='botonCompletar' onClick={deleteGoal}>Eliminar</Button>
+        <Button variant='dark' className='botonCompletar' onClick={removeItem}>Eliminar</Button>
         <Button variant='dark'>Editar</Button>
       </Card.Body>
     </Card>
